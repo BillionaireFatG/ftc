@@ -2,17 +2,24 @@ import Link from "next/link";
 import { ArrowRight, Calculator, Gauge, Cpu, Rocket, Trophy, Zap } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Waves } from "@/components/ui/waves";
 
 export default function Home() {
   return (
     <div className="flex flex-col">
-      {/* Hero Section */}
+      {/* Hero Section with Animated Waves Background */}
       <section className="relative flex min-h-[calc(100vh-4rem)] items-center justify-center overflow-hidden px-6 py-24">
-        <div className="absolute inset-0 bg-grid-white/[0.02] bg-[size:50px_50px]" />
+        {/* Animated Waves Background */}
+        <Waves 
+          className="absolute inset-0 opacity-20" 
+          strokeColor="rgba(119, 115, 255, 0.3)"
+          backgroundColor="transparent"
+          pointerSize={0.3}
+        />
         <div className="relative z-10 mx-auto max-w-4xl text-center">
           <h1 className="mb-6 text-5xl font-bold tracking-tight sm:text-6xl lg:text-7xl">
             Master Your Robot's{" "}
-            <span className="bg-gradient-to-r from-primary to-chart-1 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-primary via-purple-500 to-pink-500 bg-clip-text text-transparent animate-gradient">
               Drivetrain
             </span>
           </h1>
@@ -21,13 +28,14 @@ export default function Home() {
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link href="/drivetrains">
-              <Button size="lg" className="group">
-                Explore Drivetrains
-                <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+              <Button size="lg" className="group relative overflow-hidden">
+                <span className="relative z-10">Explore Drivetrains</span>
+                <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1 relative z-10" />
+                <div className="absolute inset-0 bg-gradient-to-r from-primary to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </Button>
             </Link>
             <Link href="/calculators">
-              <Button size="lg" variant="outline">
+              <Button size="lg" variant="outline" className="backdrop-blur-sm">
                 Try Calculator
               </Button>
             </Link>
