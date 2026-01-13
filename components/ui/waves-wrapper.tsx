@@ -16,9 +16,9 @@ export function WavesWrapper() {
   return (
     <Waves 
       key={key}
-      strokeColor="rgba(119, 115, 255, 1)"
+      strokeColor="rgba(200, 195, 255, 0.6)"
       backgroundColor="transparent"
-      pointerSize={0.5}
+      pointerSize={0.6}
     />
   )
 }
