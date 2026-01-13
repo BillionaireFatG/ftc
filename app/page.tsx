@@ -2,20 +2,18 @@ import Link from "next/link";
 import { ArrowRight, Calculator, Gauge, Cpu, Rocket, Trophy, Zap } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Waves } from "@/components/ui/waves";
+import { WavesWrapper } from "@/components/ui/waves-wrapper";
+import { TermTooltip } from "@/components/ui/term-tooltip";
 
 export default function Home() {
   return (
     <div className="flex flex-col">
       {/* Hero Section with Animated Waves Background */}
       <section className="relative flex min-h-[calc(100vh-4rem)] items-center justify-center overflow-hidden px-6 py-24">
-        {/* Animated Waves Background */}
-        <Waves 
-          className="absolute inset-0 opacity-20" 
-          strokeColor="rgba(119, 115, 255, 0.3)"
-          backgroundColor="transparent"
-          pointerSize={0.3}
-        />
+        {/* Animated Waves Background - Vibrant! */}
+        <div className="absolute inset-0 opacity-60">
+          <WavesWrapper />
+        </div>
         <div className="relative z-10 mx-auto max-w-4xl text-center">
           <h1 className="mb-6 text-5xl font-bold tracking-tight sm:text-6xl lg:text-7xl">
             Master Your Robot's{" "}
@@ -76,7 +74,7 @@ export default function Home() {
               <Gauge className="mb-2 h-10 w-10 text-primary" />
               <CardTitle>Comprehensive Guides</CardTitle>
               <CardDescription>
-                Deep dives into tank, mecanum, swerve, and omni drives with interactive models and real-world applications
+                Deep dives into tank, <TermTooltip term="mecanum">mecanum</TermTooltip>, <TermTooltip term="swerve">swerve</TermTooltip>, and omni drives with interactive models and real-world applications
               </CardDescription>
             </CardHeader>
             <CardContent>
@@ -94,7 +92,7 @@ export default function Home() {
               <Cpu className="mb-2 h-10 w-10 text-primary" />
               <CardTitle>Control Theory Mastery</CardTitle>
               <CardDescription>
-                Master PID, feedforward, state feedback, and motion profiling for precise robot control
+                Master <TermTooltip term="PID">PID</TermTooltip>, <TermTooltip term="feedforward">feedforward</TermTooltip>, state feedback, and <TermTooltip term="motion profiling">motion profiling</TermTooltip> for precise robot control
               </CardDescription>
             </CardHeader>
             <CardContent>
@@ -112,7 +110,7 @@ export default function Home() {
               <Calculator className="mb-2 h-10 w-10 text-primary" />
               <CardTitle>Interactive Calculators</CardTitle>
               <CardDescription>
-                Calculate speed, torque, acceleration, and optimal gear ratios with real-time results
+                Calculate speed, <TermTooltip term="torque">torque</TermTooltip>, acceleration, and optimal <TermTooltip term="gear ratio">gear ratios</TermTooltip> with real-time results
               </CardDescription>
             </CardHeader>
             <CardContent>

@@ -13,5 +13,12 @@ export function WavesWrapper() {
     setKey(prev => prev + 1)
   }, [pathname])
 
-  return <Waves key={key} />
+  return (
+    <Waves 
+      key={key}
+      strokeColor="rgba(119, 115, 255, 1)"
+      backgroundColor="transparent"
+      pointerSize={0.5}
+    />
+  )
 }
