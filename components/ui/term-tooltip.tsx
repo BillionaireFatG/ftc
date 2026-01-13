@@ -185,7 +185,7 @@ const glossary: Record<string, string> = {
   "defense": "Blocking or hindering opponent robots (within rules).",
   
   // Electronics & Programming
-  "motor controller": "An electronic device that controls the speed and direction of a motor.",
+  "motor controller": "An electronic device that controls motor speed and direction. Takes commands from your code and sends power to the motor.",
   "control hub": "The main computer/controller in an FTC robot. Made by REV Robotics.",
   "expansion hub": "An additional hub to control more motors/servos in FTC.",
   "roborio": "The main controller used in FRC robots.",
@@ -243,7 +243,6 @@ const glossary: Record<string, string> = {
   "prototype": "An early version of a design used for testing before making the final version.",
   
   // Electronics & Power
-  "motor controller": "An electronic device that controls motor speed and direction. Takes commands from your code and sends power to the motor.",
   "brushless": "A type of motor with electronic commutation instead of physical brushes. More efficient and powerful than brushed motors.",
   "brushed motor": "Traditional motor design with physical carbon brushes. Simpler but less efficient than brushless.",
   "redundancy": "Having backup systems so if one component fails, others can keep working. Important for reliability in competition.",
