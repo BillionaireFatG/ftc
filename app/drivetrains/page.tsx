@@ -122,8 +122,8 @@ export default function DrivetrainsPage() {
                 <div>
                   <h4 className="mb-2 font-semibold text-green-600 dark:text-green-400">Pros</h4>
                   <ul className="space-y-1 text-sm">
-                    {drivetrain.pros.map((pro) => (
-                      <li key={pro} className="flex items-start">
+                    {drivetrain.pros.map((pro, index) => (
+                      <li key={index} className="flex items-start">
                         <span className="mr-2">✓</span>
                         {pro}
                       </li>
@@ -133,8 +133,8 @@ export default function DrivetrainsPage() {
                 <div>
                   <h4 className="mb-2 font-semibold text-red-600 dark:text-red-400">Cons</h4>
                   <ul className="space-y-1 text-sm">
-                    {drivetrain.cons.map((con) => (
-                      <li key={con} className="flex items-start">
+                    {drivetrain.cons.map((con, index) => (
+                      <li key={index} className="flex items-start">
                         <span className="mr-2">✗</span>
                         {con}
                       </li>

@@ -62,8 +62,8 @@ export default function CalculatorsPage() {
             </CardHeader>
             <CardContent>
               <ul className="mb-4 space-y-2 text-sm">
-                {calc.features.map((feature) => (
-                  <li key={feature} className="flex items-start">
+                {calc.features.map((feature, index) => (
+                  <li key={index} className="flex items-start">
                     <span className="mr-2 text-primary">✓</span>
                     {feature}
                   </li>
