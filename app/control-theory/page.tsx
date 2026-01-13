@@ -11,25 +11,40 @@ const topics = [
     name: "PID Controller",
     href: "/control-theory/pid",
     icon: Activity,
-    description: "Proportional-Integral-Derivative control for precise robot movements and error correction.",
+    description: <><TermTooltip term="proportional">Proportional</TermTooltip>-<TermTooltip term="integral">Integral</TermTooltip>-<TermTooltip term="derivative">Derivative</TermTooltip> control for precise robot movements and <TermTooltip term="error">error</TermTooltip> correction.</>,
     difficulty: "Intermediate",
-    concepts: ["Error calculation", "Tuning gains", "Steady-state error", "Oscillation control"],
+    concepts: [
+      <><TermTooltip term="error calculation">Error calculation</TermTooltip></>,
+      <><TermTooltip term="tuning gains">Tuning gains</TermTooltip></>,
+      <><TermTooltip term="steady-state error">Steady-state error</TermTooltip></>,
+      <><TermTooltip term="oscillation control">Oscillation control</TermTooltip></>
+    ],
   },
   {
     name: "Feedforward Control",
     href: "/control-theory/feedforward",
     icon: TrendingUp,
-    description: "Model-based control that predicts required power based on physics equations.",
+    description: <>Model-based control that predicts required power based on physics equations.</>,
     difficulty: "Advanced",
-    concepts: ["kV constant", "kA constant", "Velocity control", "Acceleration compensation"],
+    concepts: [
+      <><TermTooltip term="kV constant">kV constant</TermTooltip></>,
+      <><TermTooltip term="kA constant">kA constant</TermTooltip></>,
+      <><TermTooltip term="velocity control">Velocity control</TermTooltip></>,
+      <><TermTooltip term="acceleration compensation">Acceleration compensation</TermTooltip></>
+    ],
   },
   {
     name: "Motion Profiling",
     href: "/control-theory/motion-profiling",
     icon: Cpu,
-    description: "Generate smooth, controlled paths with velocity and acceleration constraints.",
+    description: <>Generate smooth, controlled paths with <TermTooltip term="velocity">velocity</TermTooltip> and <TermTooltip term="acceleration">acceleration</TermTooltip> constraints.</>,
     difficulty: "Advanced",
-    concepts: ["Trapezoidal profiles", "Path following", "Velocity limits", "Smooth motion"],
+    concepts: [
+      <><TermTooltip term="trapezoidal profiles">Trapezoidal profiles</TermTooltip></>,
+      <><TermTooltip term="path following">Path following</TermTooltip></>,
+      <><TermTooltip term="velocity">Velocity</TermTooltip> limits</>,
+      <>Smooth motion</>
+    ],
   },
 ];
 
@@ -49,16 +64,16 @@ export default function ControlTheoryPage() {
         </CardHeader>
         <CardContent className="space-y-4">
           <p>
-            Control theory transforms your robot from an unpredictable machine into a precise, competition-ready system. While open-loop control (simply setting motor power) works for basic tasks, it fails when:
+            Control theory transforms your robot from an unpredictable machine into a precise, competition-ready system. While <TermTooltip term="open-loop">open-loop control</TermTooltip> (simply setting motor power) works for basic tasks, it fails when:
           </p>
           <ul className="list-disc pl-6 space-y-2">
-            <li><strong>Battery voltage changes:</strong> Motors slow down as battery drains</li>
+            <li><strong><TermTooltip term="battery">Battery</TermTooltip> voltage changes:</strong> Motors slow down as battery drains</li>
             <li><strong>Opponents interfere:</strong> Collisions push your robot off course</li>
             <li><strong>Field conditions vary:</strong> Different surfaces, game elements</li>
             <li><strong>Precision is critical:</strong> <TermTooltip term="autonomous">Autonomous</TermTooltip> scoring, accurate positioning</li>
           </ul>
           <p className="font-semibold mt-4">
-            Closed-loop control systems use <TermTooltip term="feedforward">feedback</TermTooltip> to continuously correct errors and maintain consistent performance.
+            <TermTooltip term="closed-loop">Closed-loop control</TermTooltip> systems use <TermTooltip term="feedback">feedback</TermTooltip> to continuously correct <TermTooltip term="error">errors</TermTooltip> and maintain consistent performance.
           </p>
         </CardContent>
       </Card>
@@ -77,8 +92,8 @@ export default function ControlTheoryPage() {
             <CardContent>
               <h4 className="mb-2 text-sm font-semibold">Key Concepts:</h4>
               <ul className="mb-4 space-y-1 text-sm">
-                {topic.concepts.map((concept) => (
-                  <li key={concept} className="flex items-start">
+                {topic.concepts.map((concept, index) => (
+                  <li key={index} className="flex items-start">
                     <span className="mr-2 text-primary">•</span>
                     {concept}
                   </li>
@@ -101,21 +116,21 @@ export default function ControlTheoryPage() {
         </CardHeader>
         <CardContent className="space-y-4">
           <div>
-            <h4 className="font-semibold mb-2">1. Start with PID</h4>
+            <h4 className="font-semibold mb-2">1. Start with <TermTooltip term="PID">PID</TermTooltip></h4>
             <p className="text-sm text-muted-foreground">
-              PID control is the foundation. Master it first for heading hold, turn-to-angle, and straight driving.
+              <TermTooltip term="PID">PID</TermTooltip> control is the foundation. Master it first for <TermTooltip term="heading hold">heading hold</TermTooltip>, <TermTooltip term="turn-to-angle">turn-to-angle</TermTooltip>, and <TermTooltip term="straight driving">straight driving</TermTooltip>.
             </p>
           </div>
           <div>
-            <h4 className="font-semibold mb-2">2. Add Feedforward</h4>
+            <h4 className="font-semibold mb-2">2. Add <TermTooltip term="feedforward">Feedforward</TermTooltip></h4>
             <p className="text-sm text-muted-foreground">
-              Combine PID with feedforward for better performance and faster response times.
+              Combine <TermTooltip term="PID">PID</TermTooltip> with <TermTooltip term="feedforward">feedforward</TermTooltip> for better performance and faster <TermTooltip term="response time">response times</TermTooltip>.
             </p>
           </div>
           <div>
-            <h4 className="font-semibold mb-2">3. Implement Motion Profiling</h4>
+            <h4 className="font-semibold mb-2">3. Implement <TermTooltip term="motion profiling">Motion Profiling</TermTooltip></h4>
             <p className="text-sm text-muted-foreground">
-              Once basic control works, add motion profiling for smooth, optimized autonomous paths.
+              Once basic control works, add <TermTooltip term="motion profiling">motion profiling</TermTooltip> for smooth, optimized <TermTooltip term="autonomous">autonomous</TermTooltip> paths.
             </p>
           </div>
         </CardContent>

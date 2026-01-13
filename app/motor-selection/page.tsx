@@ -181,21 +181,21 @@ export default function MotorSelectionPage() {
           <div>
             <h4 className="font-semibold">For FTC Drivetrains:</h4>
             <ul className="list-disc pl-6 space-y-1 text-sm mt-2">
-              <li><strong>Speed-focused:</strong> REV HD Hex (6000 RPM) with gear ratio</li>
-              <li><strong>Balanced:</strong> goBILDA 5202 435 RPM or NeveRest 20</li>
-              <li><strong>Torque-focused:</strong> NeveRest 40 or goBILDA 312 RPM</li>
+              <li><strong>Speed-focused:</strong> REV HD Hex (6000 <TermTooltip term="RPM">RPM</TermTooltip>) with <TermTooltip term="gear ratio">gear ratio</TermTooltip></li>
+              <li><strong>Balanced:</strong> goBILDA 5202 435 <TermTooltip term="RPM">RPM</TermTooltip> or NeveRest 20</li>
+              <li><strong><TermTooltip term="torque">Torque</TermTooltip>-focused:</strong> NeveRest 40 or goBILDA 312 <TermTooltip term="RPM">RPM</TermTooltip></li>
             </ul>
           </div>
           <div>
             <h4 className="font-semibold">For FRC Drivetrains:</h4>
             <ul className="list-disc pl-6 space-y-1 text-sm mt-2">
-              <li><strong>Modern choice:</strong> NEO or NEO 550 (brushless, efficient)</li>
+              <li><strong>Modern choice:</strong> NEO or NEO 550 (<TermTooltip term="brushless">brushless</TermTooltip>, efficient)</li>
               <li><strong>Budget option:</strong> CIM motors (reliable, proven)</li>
-              <li><strong>High performance:</strong> Falcon 500 (integrated controller)</li>
+              <li><strong>High performance:</strong> Falcon 500 (integrated <TermTooltip term="motor controller">controller</TermTooltip>)</li>
             </ul>
           </div>
           <div className="bg-blue-500/10 border border-blue-500/30 rounded-lg p-4">
-            <p className="text-sm"><strong>Pro Tip:</strong> Always use multiple motors for drivetrains (4-6) to distribute load and provide redundancy.</p>
+            <p className="text-sm"><strong>Pro Tip:</strong> Always use multiple motors for drivetrains (4-6) to distribute load and provide <TermTooltip term="redundancy">redundancy</TermTooltip>.</p>
           </div>
         </CardContent>
       </Card>
